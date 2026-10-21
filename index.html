@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levantamiento de Requisitos Funcionales y No Funcionales</title>
+</head>
+<body>
+
+    <h1>Levantamiento de requisitos funcionales y no funcionales</h1>
+
+    <!-- Datos Informativos -->
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Nombre</th>
+            <td>Cristhian Quizhpe; Pablo Valdivieso</td>
+        </tr>
+        <tr>
+            <th>Fecha</th>
+            <td>21/10/2024</td>
+        </tr>
+    </table>
+    <img src="img/logo.png" alt="">
+    <br>
+
+    <!-- Tabla de Requisitos Funcionales -->
+    <h2>Requisitos Funcionales</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Requisito funcional</th>
+                <th>Origen (interesado)</th>
+                <th>Prioridad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RF-01</td>
+                <td>El sistema debe permitir al socio generar y compartir un código QR único para referir a nuevos clientes desde la aplicación móvil.</td>
+                <td>Socio / Marketing</td>
+                <td>Must (M)</td>
+            </tr>
+            <tr>
+                <td>RF-02</td>
+                <td>El sistema debe capturar la intención de crédito del usuario durante el onboarding e identificarlo para aplicar la exención del depósito inicial de $30.</td>
+                <td>Jefatura de Marketing</td>
+                <td>Must (M)</td>
+            </tr>
+            <tr>
+                <td>RF-03</td>
+                <td>El sistema debe desplegar un feed de comunidad encabezado por la mascota institucional que muestre noticias, capacitaciones, retos y entregas de premios por provincia.</td>
+                <td>Gestor de Contenidos / Socio</td>
+                <td>Must (M)</td>
+            </tr>
+            <tr>
+                <td>RF-04</td>
+                <td>El sistema debe asignar puntos, insignias y niveles al usuario al completar capacitaciones de educación financiera, juegos o retos interactivos.</td>
+                <td>Responsabilidad Social</td>
+                <td>Should (S)</td>
+            </tr>
+            <tr>
+                <td>RF-05</td>
+                <td>El sistema debe permitir al gestor de contenidos crear y publicar capacitaciones con videos, talleres, actividades de salud/bienestar y juegos educativos.</td>
+                <td>Gestor de Contenidos</td>
+                <td>Must (M)</td>
+            </tr>
+            <tr>
+                <td>RF-06</td>
+                <td>El sistema debe permitir al socio consultar su saldo acumulado de puntos y solicitar el canje por souvenirs o acreditaciones monetarias a su cuenta.</td>
+                <td>Socio</td>
+                <td>Should (S)</td>
+            </tr>
+            <tr>
+                <td>RF-07</td>
+                <td>El sistema debe generar reportes consolidados y estadísticos exportables en formatos PDF y Excel para el análisis gerencial de Marketing y Responsabilidad Social.</td>
+                <td>Administrador / Gerencia</td>
+                <td>Must (M)</td>
+            </tr>
+            <tr>
+                <td>RF-08</td>
+                <td>El sistema debe permitir la redirección directa a la app móvil mediante la clonación de la página web principal de la cooperativa con un solo clic.</td>
+                <td>Equipo Técnico / Marketing</td>
+                <td>Could (C)</td>
+            </tr>
+            <tr>
+                <td>RF-09</td>
+                <td>El sistema debe permitir al socio crear y administrar su perfil de usuario dentro de la plataforma.</td>
+                <td>Socio / Cliente</td>
+                <td>Must (M)</td>
+            </tr>
+            <tr>
+                <td>RF-10</td>
+                <td>El sistema debe generar y gestionar notificaciones para alertar a los usuarios sobre nuevas actividades, capacitaciones y estado de sus referidos.</td>
+                <td>Administrador</td>
+                <td>Should (S)</td>
+            </tr>
+            <tr>
+                <td>RF-11</td>
+                <td>El sistema debe permitir al Administrador gestionar campañas, administrar las recompensas y moderar las publicaciones de la comunidad.</td>
+                <td>Administrador</td>
+                <td>Must (M)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <!-- Tabla de Requisitos No Funcionales -->
+    <h2>Requisitos No Funcionales</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Requisito no funcional</th>
+                <th>Categoría</th>
+                <th>Criterio medible</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RNF-01</td>
+                <td>La plataforma desarrollada en Flutter y Supabase debe mantener tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios registrados e interacciones simultáneas, asegurando ser una solución escalable.</td>
+                <td>Rendimiento y Escalabilidad</td>
+                <td>Tiempo de respuesta &lt; 2 s con carga de 100k usuarios.</td>
+            </tr>
+            <tr>
+                <td>RNF-02</td>
+                <td>El sistema debe cifrar los datos de los usuarios e intenciones de crédito en tránsito (TLS 1.3) y en reposo (AES-256), aplicando control de acceso basado en roles (Socio, Gestor, Administrador) para garantizar una solución modular y segura.</td>
+                <td>Seguridad y Privacidad</td>
+                <td>Cero filtraciones de datos y paso del 100% de pruebas de penetración.</td>
+            </tr>
+            <tr>
+                <td>RNF-03</td>
+                <td>La interfaz móvil debe diseñarse para que un usuario mayor de 40 años pueda completar la consulta del feed o la visualización de su código QR en máximo 3 pasos y con texto no menor a 16pt.</td>
+                <td>Usabilidad y Accesibilidad</td>
+                <td>Prueba de usabilidad exitosa en &ge; 90% de adultos mayores evaluados sin capacitación.</td>
+            </tr>
+            <tr>
+                <td>RNF-04</td>
+                <td>El backend hospedado en Supabase debe garantizar una disponibilidad del servicio del 99.5% mensual (24/7) durante el lanzamiento de campañas masivas de referidos.</td>
+                <td>Disponibilidad</td>
+                <td>Tiempo de caída ininterrumpida menor a 3.6 horas/mes.</td>
+            </tr>
+            <tr>
+                <td>RNF-05</td>
+                <td>La aplicación desarrollada en Flutter debe ser ejecutable e interoperable de manera idéntica en dispositivos Android (versión 8.0+) e iOS (versión 13.0+).</td>
+                <td>Compatibilidad</td>
+                <td>Comprobación del 100% de funcionalidades en ambas tiendas oficiales (App Store y Play Store).</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
