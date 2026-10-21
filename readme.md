@@ -1,3 +1,3 @@
 **NOMBRES DE LOS INTEGRANTES:**
-Cristhian Quizhpe
+Cristhian Quizhpe;
 Pablo Valdivieso
