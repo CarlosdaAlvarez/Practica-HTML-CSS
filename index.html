@@ -4,72 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Levantamiento de Requisitos y Casos de Uso - Web y Móvil | CAC-PJL</title>
-<style>
-:root { --turquesa: #0054C4; --rojo: #F5BD04; --verde: #FBCD44; --blanco: #FFFFFF; --texto: #26364D; --borde: #BCD0EB; }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--blanco); color: var(--texto); font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.58; }
-.pagina { max-width: 1160px; margin: 0 auto; padding: 26px 24px 60px; }
-.encabezado { padding: 6px 0 16px; border-bottom: 4px solid var(--turquesa); }
-h1 { margin: 0 0 10px; color: #004AA8; font-size: 29px; line-height: 1.25; }
-.subtitulo { margin: 0; color: #465B79; }
-h2 { color: #0054C4; font-size: 23px; border-bottom: 2px solid #CBDCF3; margin: 37px 0 14px; padding-bottom: 7px; }
-h3 { color: #0053B6; font-size: 18px; margin: 27px 0 11px; }
-h4 { margin: 19px 0 7px; color: #003D8C; font-size: 16px; }
-p { margin: 10px 0 14px; }
-ul, ol { padding-left: 25px; margin: 8px 0 15px; }
-li { margin-bottom: 6px; }
-li::marker { color: #B38400; }
-a { color: #004CB7; text-decoration: underline; text-underline-offset: 2px; }
-.navegacion { margin: 18px 0 23px; padding: 12px 16px; background: #F1F6FF; border-left: 4px solid var(--verde); }
-.navegacion strong { display: inline-block; margin-right: 10px; }
-.navegacion a { display: inline-block; margin-right: 14px; margin-bottom: 4px; }
-.table-scroll { overflow-x: auto; max-width: 100%; margin: 10px 0 20px; }
-table { width: 100%; border-collapse: collapse; background: #fff; }
-th, td { border: 1px solid var(--borde); padding: 9px 11px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-th { background: var(--turquesa); color: white; font-weight: bold; }
-tbody tr:nth-child(even) { background: #F4F8FF; }
-.tabla-word-1 th:last-child, .tabla-word-1 td:last-child { min-width: 110px; }
-td:first-child { font-weight: 600; }
-.tabla-datos { max-width: 900px; }
-.tabla-datos th { width: 190px; }
-.tabla-datos td { font-weight: normal; }
-.table-note { font-size: 13px; color: #536986; margin: -9px 0 16px; }
-.nota { border-left: 4px solid var(--rojo); padding: 9px 14px; background: #FFFAE9; margin: 15px 0; }
-.nota p { margin: 4px 0; }
-.idea { border-left: 3px solid var(--verde); padding: 6px 13px; margin: 0 0 14px; background: #FFFDF5; }
-.idea h3 { margin: 2px 0 4px; font-size: 16px; }
-.idea p { margin: 0; }
-.use-case { background: #F3F7FE; padding: 11px 17px; border-left: 4px solid var(--turquesa); margin: 17px 0; }
-.use-case h3 { margin: 4px 0 9px; }
-.use-case p { margin: 7px 0; }
-.table-list { margin: 0; padding-left: 19px; }
-.cierre { border-top: 3px solid var(--rojo); padding-top: 12px; margin-top: 24px; }
-.pie { border-top: 1px solid var(--borde); margin-top: 38px; padding-top: 9px; font-size: 12px; color: #5F6F85; }
-@media(max-width: 600px) {
-  .pagina { padding: 15px 13px 36px; }
-  h1 { font-size: 24px; } h2 { font-size: 21px; }
-  table { min-width: 580px; } .tabla-datos { min-width: 0; }
-  th,td { padding: 8px; font-size: 14px; }
-}
-@media print {
-  @page { size: A4; margin: 13mm; }
-  body { font-size: 11pt; color: #26364D; }
-  .pagina { max-width: none; padding: 0; }
-  .navegacion { display: none; }
-  h2,h3,h4,.idea,.use-case { break-inside: avoid; }
-  tr { break-inside: avoid; }
-  .table-scroll { overflow: visible; }
-  table { min-width: 0 !important; font-size: 9pt; }
-  th,td { padding: 5px 6px; }
-  a { color: inherit; }
-}
-</style>
-</head><body><main class="pagina">
+<link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+<main class="pagina">
+
 <header class="encabezado">
 <h1 id="inicio">Levantamiento de Requisitos y Casos de Uso (Ecosistema Web y Móvil)</h1>
 <p class="subtitulo">Plataforma de Referidos y Fidelización - Cooperativa de Ahorro y Crédito Padre Julián Lorente</p>
 </header>
+
+<nav class="navegacion" aria-label="Contenido del documento">
+<strong>Contenido:</strong>
+<a href="#inicio">Inicio</a>
+<a href="#presentacion">Descripción</a>
+<a href="#actividad1">Actividad 1</a>
+<a href="#actividad2">Actividad 2</a>
+<a href="#requisitos">Requisitos RF/RNF</a>
+<a href="#web">Panel web</a>
+<a href="#casos">Casos de uso</a>
+<a href="#tecnologias">Tecnologías</a>
+<a href="#prototipo">Prototipo</a>
+<a href="#ideas">18 propuestas</a>
+</nav>
+
 <h2 id="datos">Datos informativos</h2>
 <div class="table-scroll"><table class="tabla-datos"><tbody>
 <tr><th scope="row">Nombres completos</th><td>Cristhian Alberto Quizhpe Pullaguari; Pablo Mateo Valdivieso Carrasco</td></tr>
@@ -80,13 +38,17 @@ td:first-child { font-weight: 600; }
 <tr><th scope="row">Institución</th><td>Cooperativa de Ahorro y Crédito Padre Julián Lorente</td></tr>
 <tr><th scope="row">Problema aplicado</th><td>Plataforma de Referidos y Fidelización (Reto 1)</td></tr>
 <tr><th scope="row">Stack tecnológico</th><td>Frontend en Flutter, Backend en Supabase (Capacidad: 100.000 usuarios)</td></tr>
+<tr><th scope="row">Prototipo en línea</th><td><a href="https://cooperativa-padre-juli-n-lorente-plataforma-digit.ai.studio/" target="_blank" rel="noopener">Abrir el prototipo interactivo</a></td></tr>
 </tbody></table></div>
-<nav class="navegacion" aria-label="Contenido del documento"><strong>Contenido:</strong> <a href="#presentacion">Descripción y alcance</a><a href="#actividad1">Actividad 1</a><a href="#actividad2">Actividad 2</a><a href="#web">Panel web</a><a href="#casos">Casos de uso</a><a href="#ideas">18 propuestas</a></nav>
+
 <h2 id="presentacion">1. Descripción y alcance del proyecto</h2>
+
 <h3 id="descripcion-general">Descripción general</h3>
 <p>El proyecto consiste en el desarrollo de una Plataforma de Referidos y Fidelización para la CAC-PJL, cuyo objetivo es captar nuevos clientes mediante un sistema de referidos por código QR y fortalecer la relación con los socios actuales. Esto se logra a través de un ecosistema digital, construido en Flutter y Supabase, que integra mecánicas de gamificación, una red social interna, módulos de educación financiera, retos y un sistema de recompensas para incentivar la participación activa.</p>
+
 <h3 id="descripcion-ecosistema">Ecosistema móvil y administrativo</h3>
 <p>El proyecto consiste en el desarrollo de una Plataforma Integral de Referidos y Fidelización para la CAC-PJL, estructurada en una aplicación móvil en Flutter para los socios y un panel de administración web optimizado para la Jefatura y el Departamento de Marketing y Administración. Su objetivo es captar nuevos clientes mediante códigos QR, gestionar campañas activas, administrar recompensas, moderar la red social interna y analizar métricas de rendimiento a través de Supabase.</p>
+
 <h3 id="alcance">Alcance</h3>
 <p>De acuerdo con la especificación del proyecto, el alcance contempla el desarrollo de la plataforma abarcando los siguientes módulos principales:</p>
 <ul>
@@ -109,7 +71,9 @@ td:first-child { font-weight: 600; }
 <li>Sistema de puntos, canjes y recompensas.</li>
 <li>Módulo de reportes gerenciales exportables (PDF/Excel).</li>
 </ul>
+
 <h2 id="actividad1">2. Actividad 1. Elicitación de requisitos</h2>
+
 <h3 id="partes">1.1 Identifica a las partes interesadas</h3>
 <div class="table-scroll"><table class="tabla-word-1">
 <thead><tr><th scope="col">Parte interesada</th><th scope="col">Tipo</th><th scope="col">Interés o necesidad principal</th><th scope="col">Influencia</th></tr></thead>
@@ -158,6 +122,7 @@ td:first-child { font-weight: 600; }
 </tr>
 </tbody></table></div>
 <p class="table-note">La columna «Influencia» se conserva sin completar porque no contiene valores en el documento original.</p>
+
 <h3 id="tecnicas">1.2 Selecciona y justifica las técnicas de elicitación</h3>
 <div class="table-scroll"><table class="tabla-word-2">
 <thead><tr><th scope="col">Técnica</th><th scope="col">¿La usas?</th><th scope="col">¿Con quién?</th><th scope="col">¿Por qué?</th></tr></thead>
@@ -199,6 +164,7 @@ td:first-child { font-weight: 600; }
 <td>Ayuda a transformar los controles manuales de asistencia y referidos en flujos digitales automatizados con reportes en PDF/Excel.</td>
 </tr>
 </tbody></table></div>
+
 <h3 id="entrevista">1.3 Prepara tu entrevista</h3>
 <p>Entrevista dirigida a: Jefatura de Marketing y Jefatura de Responsabilidad Social</p>
 <ul>
@@ -206,7 +172,9 @@ td:first-child { font-weight: 600; }
 <li>¿De qué manera participará la mascota institucional en el feed principal para conectar tanto con el 60% de socios mayores de 40 años como con el 40% de socios jóvenes?</li>
 <li>¿Cuáles serán los criterios y topes para la asignación de recompensas (desde souvenirs de $10 hasta premios de $500) según la prioridad de las 8 provincias en las que opera la cooperativa?</li>
 </ul>
+
 <h2 id="actividad2">3. Actividad 2. Análisis de requisitos</h2>
+
 <h3 id="negocio">2.1 Requisitos de negocio</h3>
 <div class="table-scroll"><table class="tabla-word-3">
 <thead><tr><th scope="col">ID</th><th scope="col">Definición del Requisito de Negocio</th></tr></thead>
@@ -216,305 +184,96 @@ td:first-child { font-weight: 600; }
 <td>Reducir el Costo de Adquisición de Clientes (CAC) de $20 a $5 por socio en un plazo de 12 meses, mediante la implementación de una plataforma digital de referidos por código QR y gamificación capaz de captar más de 14.000 nuevos socios y soportar hasta 100.000 usuarios concurrentes.</td>
 </tr>
 </tbody></table></div>
+
 <h3 id="necesidades">2.2 Necesidades de los usuarios</h3>
 <div class="table-scroll"><table class="tabla-word-4">
 <thead><tr><th scope="col">Tipo de usuario</th><th scope="col">Necesidad del usuario</th></tr></thead>
 <tbody>
-<tr>
-<td>Socio</td>
-<td>El socio necesita recomendar la Cooperativa a nuevos clientes.</td>
-</tr>
-<tr>
-<td>Jefatura de Marketing</td>
-<td>La Jefatura de Marketing necesita identificar a los usuarios interesados en créditos.</td>
-</tr>
-<tr>
-<td>Socio</td>
-<td>Los socios necesitan informarse sobre las novedades y eventos de la institución.</td>
-</tr>
-<tr>
-<td>Responsabilidad Social</td>
-<td>Responsabilidad Social necesita promover la educación financiera de forma interactiva.</td>
-</tr>
-<tr>
-<td>Gestor de Contenidos</td>
-<td>El gestor de contenidos necesita un espacio para distribuir material formativo.</td>
-</tr>
-<tr>
-<td>Socio</td>
-<td>El socio necesita canjear las recompensas obtenidas.</td>
-</tr>
-<tr>
-<td>Gerencia</td>
-<td>La Gerencia necesita analizar los datos generados por la plataforma.</td>
-</tr>
-<tr>
-<td>Equipo Técnico</td>
-<td>El Equipo Técnico necesita facilitar el acceso de los clientes a la aplicación móvil.</td>
-</tr>
-<tr>
-<td>Socio</td>
-<td>El socio necesita identificarse y gestionar sus datos en la red social de la cooperativa.</td>
-</tr>
-<tr>
-<td>Administrador</td>
-<td>El administrador necesita comunicar novedades urgentes o estados a los usuarios.</td>
-</tr>
-<tr>
-<td>Administrador</td>
-<td>El administrador necesita controlar el contenido publicado y las recompensas del sistema.</td>
-</tr>
-<tr>
-<td>Socio</td>
-<td>El socio necesita interactuar con la comunidad digital de la cooperativa.</td>
-</tr>
-<tr>
-<td>Gestor de Contenidos</td>
-<td>El gestor de contenidos necesita proveer información enfocada en el bienestar integral.</td>
-</tr>
-<tr>
-<td>Socio</td>
-<td>El socio necesita realizar actividades recreativas dentro de la plataforma.</td>
-</tr>
-<tr>
-<td>Administrador</td>
-<td>El administrador necesita gestionar los accesos a la plataforma tecnológica.</td>
-</tr>
+<tr><td>Socio</td><td>El socio necesita recomendar la Cooperativa a nuevos clientes.</td></tr>
+<tr><td>Jefatura de Marketing</td><td>La Jefatura de Marketing necesita identificar a los usuarios interesados en créditos.</td></tr>
+<tr><td>Socio</td><td>Los socios necesitan informarse sobre las novedades y eventos de la institución.</td></tr>
+<tr><td>Responsabilidad Social</td><td>Responsabilidad Social necesita promover la educación financiera de forma interactiva.</td></tr>
+<tr><td>Gestor de Contenidos</td><td>El gestor de contenidos necesita un espacio para distribuir material formativo.</td></tr>
+<tr><td>Socio</td><td>El socio necesita canjear las recompensas obtenidas.</td></tr>
+<tr><td>Gerencia</td><td>La Gerencia necesita analizar los datos generados por la plataforma.</td></tr>
+<tr><td>Equipo Técnico</td><td>El Equipo Técnico necesita facilitar el acceso de los clientes a la aplicación móvil.</td></tr>
+<tr><td>Socio</td><td>El socio necesita identificarse y gestionar sus datos en la red social de la cooperativa.</td></tr>
+<tr><td>Administrador</td><td>El administrador necesita comunicar novedades urgentes o estados a los usuarios.</td></tr>
+<tr><td>Administrador</td><td>El administrador necesita controlar el contenido publicado y las recompensas del sistema.</td></tr>
+<tr><td>Socio</td><td>El socio necesita interactuar con la comunidad digital de la cooperativa.</td></tr>
+<tr><td>Gestor de Contenidos</td><td>El gestor de contenidos necesita proveer información enfocada en el bienestar integral.</td></tr>
+<tr><td>Socio</td><td>El socio necesita realizar actividades recreativas dentro de la plataforma.</td></tr>
+<tr><td>Administrador</td><td>El administrador necesita gestionar los accesos a la plataforma tecnológica.</td></tr>
 </tbody></table></div>
+
 <h3 id="usuario">2.3 Requisitos de usuario</h3>
 <div class="table-scroll"><table class="tabla-word-5">
 <thead><tr><th scope="col">ID del requisito</th><th scope="col">Requisito de usuario</th><th scope="col">Tipo de usuario</th></tr></thead>
 <tbody>
-<tr>
-<td>RU-01</td>
-<td>El socio debe poder generar y compartir un código QR único para referir a nuevos clientes desde la aplicación móvil.</td>
-<td>Socio</td>
-</tr>
-<tr>
-<td>RU-02</td>
-<td>El usuario debe poder registrar su intención de crédito durante el onboarding para que se le aplique la exención del depósito inicial de $30.</td>
-<td>Jefatura de Marketing</td>
-</tr>
-<tr>
-<td>RU-03</td>
-<td>El socio debe poder visualizar un feed de comunidad encabezado por la mascota institucional que muestre noticias, capacitaciones, retos y entregas de premios por provincia.</td>
-<td>Socio</td>
-</tr>
-<tr>
-<td>RU-04</td>
-<td>El usuario debe poder recibir puntos, insignias y niveles al completar capacitaciones de educación financiera, juegos o retos interactivos.</td>
-<td>Responsabilidad Social</td>
-</tr>
-<tr>
-<td>RU-05</td>
-<td>El gestor de contenidos debe poder crear y publicar capacitaciones con videos, talleres, actividades de salud/bienestar y juegos educativos.</td>
-<td>Gestor de Contenidos</td>
-</tr>
-<tr>
-<td>RU-06</td>
-<td>El socio debe poder consultar su saldo acumulado de puntos y solicitar el canje por souvenirs o acreditaciones monetarias a su cuenta.</td>
-<td>Socio</td>
-</tr>
-<tr>
-<td>RU-07</td>
-<td>El administrador debe poder extraer reportes consolidados y estadísticos exportables en formatos PDF y Excel para el análisis gerencial de Marketing y Responsabilidad Social.</td>
-<td>Gerencia</td>
-</tr>
-<tr>
-<td>RU-08</td>
-<td>El usuario debe poder ser redirigido directamente a la app móvil mediante la clonación de la página web principal de la cooperativa con un solo clic.</td>
-<td>Equipo Técnico</td>
-</tr>
-<tr>
-<td>RU-09</td>
-<td>El socio debe poder crear y administrar su perfil de usuario dentro de la plataforma.</td>
-<td>Socio</td>
-</tr>
-<tr>
-<td>RU-10</td>
-<td>El usuario debe poder recibir notificaciones para estar alertado sobre nuevas actividades, capacitaciones y el estado de sus referidos.</td>
-<td>Administrador</td>
-</tr>
-<tr>
-<td>RU-11</td>
-<td>El administrador debe poder gestionar campañas, administrar las recompensas y moderar las publicaciones de la comunidad.</td>
-<td>Administrador</td>
-</tr>
-<tr>
-<td>RU-12</td>
-<td>El socio debe poder interactuar con otros usuarios de acuerdo con las reglas de privacidad definidas.</td>
-<td>Socio</td>
-</tr>
-<tr>
-<td>RU-13</td>
-<td>El gestor de contenidos debe poder administrar contenido de salud y bienestar asociado a los servicios disponibles.</td>
-<td>Gestor de Contenidos</td>
-</tr>
-<tr>
-<td>RU-14</td>
-<td>El socio debe poder participar en talleres, jugar y completar retos.</td>
-<td>Socio</td>
-</tr>
-<tr>
-<td>RU-15</td>
-<td>El administrador debe poder gestionar a los usuarios del sistema.</td>
-<td>Administrador</td>
-</tr>
+<tr><td>RU-01</td><td>El socio debe poder generar y compartir un código QR único para referir a nuevos clientes desde la aplicación móvil.</td><td>Socio</td></tr>
+<tr><td>RU-02</td><td>El usuario debe poder registrar su intención de crédito durante el onboarding para que se le aplique la exención del depósito inicial de $30.</td><td>Jefatura de Marketing</td></tr>
+<tr><td>RU-03</td><td>El socio debe poder visualizar un feed de comunidad encabezado por la mascota institucional que muestre noticias, capacitaciones, retos y entregas de premios por provincia.</td><td>Socio</td></tr>
+<tr><td>RU-04</td><td>El usuario debe poder recibir puntos, insignias y niveles al completar capacitaciones de educación financiera, juegos o retos interactivos.</td><td>Responsabilidad Social</td></tr>
+<tr><td>RU-05</td><td>El gestor de contenidos debe poder crear y publicar capacitaciones con videos, talleres, actividades de salud/bienestar y juegos educativos.</td><td>Gestor de Contenidos</td></tr>
+<tr><td>RU-06</td><td>El socio debe poder consultar su saldo acumulado de puntos y solicitar el canje por souvenirs o acreditaciones monetarias a su cuenta.</td><td>Socio</td></tr>
+<tr><td>RU-07</td><td>El administrador debe poder extraer reportes consolidados y estadísticos exportables en formatos PDF y Excel para el análisis gerencial de Marketing y Responsabilidad Social.</td><td>Gerencia</td></tr>
+<tr><td>RU-08</td><td>El usuario debe poder ser redirigido directamente a la app móvil mediante la clonación de la página web principal de la cooperativa con un solo clic.</td><td>Equipo Técnico</td></tr>
+<tr><td>RU-09</td><td>El socio debe poder crear y administrar su perfil de usuario dentro de la plataforma.</td><td>Socio</td></tr>
+<tr><td>RU-10</td><td>El usuario debe poder recibir notificaciones para estar alertado sobre nuevas actividades, capacitaciones y el estado de sus referidos.</td><td>Administrador</td></tr>
+<tr><td>RU-11</td><td>El administrador debe poder gestionar campañas, administrar las recompensas y moderar las publicaciones de la comunidad.</td><td>Administrador</td></tr>
+<tr><td>RU-12</td><td>El socio debe poder interactuar con otros usuarios de acuerdo con las reglas de privacidad definidas.</td><td>Socio</td></tr>
+<tr><td>RU-13</td><td>El gestor de contenidos debe poder administrar contenido de salud y bienestar asociado a los servicios disponibles.</td><td>Gestor de Contenidos</td></tr>
+<tr><td>RU-14</td><td>El socio debe poder participar en talleres, jugar y completar retos.</td><td>Socio</td></tr>
+<tr><td>RU-15</td><td>El administrador debe poder gestionar a los usuarios del sistema.</td><td>Administrador</td></tr>
 </tbody></table></div>
+
 <h3 id="sistema">2.4 Requisitos del sistema</h3>
 <div class="table-scroll"><table class="tabla-word-6">
 <thead><tr><th scope="col">ID del requisito</th><th scope="col">Requisito del sistema</th></tr></thead>
 <tbody>
-<tr>
-<td>RS-01</td>
-<td>El sistema debe habilitar un módulo que genere un código QR único para referir a nuevos clientes desde la aplicación móvil.</td>
-</tr>
-<tr>
-<td>RS-02</td>
-<td>El sistema debe capturar la intención de crédito del usuario durante el onboarding e identificarlo en la base de datos para la exención del depósito inicial de $30.</td>
-</tr>
-<tr>
-<td>RS-03</td>
-<td>El sistema debe desplegar una interfaz de feed de comunidad que recupere y muestre noticias, capacitaciones, retos y entregas de premios.</td>
-</tr>
-<tr>
-<td>RS-04</td>
-<td>El sistema debe calcular y asignar puntos, insignias y niveles en el perfil del usuario tras registrar la finalización de capacitaciones o juegos.</td>
-</tr>
-<tr>
-<td>RS-05</td>
-<td>El sistema debe contar con un panel que permita la carga, creación y publicación de capacitaciones con videos y juegos educativos.</td>
-</tr>
-<tr>
-<td>RS-06</td>
-<td>El sistema debe procesar el saldo acumulado de puntos y registrar las solicitudes de canje por souvenirs o acreditaciones monetarias.</td>
-</tr>
-<tr>
-<td>RS-07</td>
-<td>El sistema debe generar y compilar reportes consolidados exportables en formatos PDF y Excel con base en datos estadísticos.</td>
-</tr>
-<tr>
-<td>RS-08</td>
-<td>El sistema debe incluir enlaces de redirección a la app móvil desde la página web clonada con un solo clic.</td>
-</tr>
-<tr>
-<td>RS-09</td>
-<td>El sistema debe almacenar y permitir la modificación de los datos del perfil de usuario en la base de datos.</td>
-</tr>
-<tr>
-<td>RS-10</td>
-<td>El sistema debe disparar notificaciones y alertas automáticas a los usuarios sobre nuevas actividades y estado de referidos.</td>
-</tr>
-<tr>
-<td>RS-11</td>
-<td>El sistema debe proveer herramientas de administración para gestionar campañas, inventario de recompensas y moderación de publicaciones.</td>
-</tr>
-<tr>
-<td>RS-12</td>
-<td>El sistema en Supabase y Flutter debe procesar operaciones manteniendo tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios concurrentes.</td>
-</tr>
-<tr>
-<td>RS-13</td>
-<td>El sistema debe encriptar las transmisiones de datos con TLS 1.3, cifrar los datos en reposo con AES-256 y validar controles de acceso por roles.</td>
-</tr>
-<tr>
-<td>RS-14</td>
-<td>El sistema backend hospedado en Supabase debe garantizar una disponibilidad del 99.5% mensual limitando el tiempo de caída ininterrumpida a menos de 3.6 horas/mes.</td>
-</tr>
-<tr>
-<td>RS-15</td>
-<td>El sistema móvil desarrollado en Flutter debe compilar código ejecutable e interoperable de manera idéntica en dispositivos Android versión 8.0 o superior e iOS versión 13.0 o superior.</td>
-</tr>
+<tr><td>RS-01</td><td>El sistema debe habilitar un módulo que genere un código QR único para referir a nuevos clientes desde la aplicación móvil.</td></tr>
+<tr><td>RS-02</td><td>El sistema debe capturar la intención de crédito del usuario durante el onboarding e identificarlo en la base de datos para la exención del depósito inicial de $30.</td></tr>
+<tr><td>RS-03</td><td>El sistema debe desplegar una interfaz de feed de comunidad que recupere y muestre noticias, capacitaciones, retos y entregas de premios.</td></tr>
+<tr><td>RS-04</td><td>El sistema debe calcular y asignar puntos, insignias y niveles en el perfil del usuario tras registrar la finalización de capacitaciones o juegos.</td></tr>
+<tr><td>RS-05</td><td>El sistema debe contar con un panel que permita la carga, creación y publicación de capacitaciones con videos y juegos educativos.</td></tr>
+<tr><td>RS-06</td><td>El sistema debe procesar el saldo acumulado de puntos y registrar las solicitudes de canje por souvenirs o acreditaciones monetarias.</td></tr>
+<tr><td>RS-07</td><td>El sistema debe generar y compilar reportes consolidados exportables en formatos PDF y Excel con base en datos estadísticos.</td></tr>
+<tr><td>RS-08</td><td>El sistema debe incluir enlaces de redirección a la app móvil desde la página web clonada con un solo clic.</td></tr>
+<tr><td>RS-09</td><td>El sistema debe almacenar y permitir la modificación de los datos del perfil de usuario en la base de datos.</td></tr>
+<tr><td>RS-10</td><td>El sistema debe disparar notificaciones y alertas automáticas a los usuarios sobre nuevas actividades y estado de referidos.</td></tr>
+<tr><td>RS-11</td><td>El sistema debe proveer herramientas de administración para gestionar campañas, inventario de recompensas y moderación de publicaciones.</td></tr>
+<tr><td>RS-12</td><td>El sistema en Supabase y Flutter debe procesar operaciones manteniendo tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios concurrentes.</td></tr>
+<tr><td>RS-13</td><td>El sistema debe encriptar las transmisiones de datos con TLS 1.3, cifrar los datos en reposo con AES-256 y validar controles de acceso por roles.</td></tr>
+<tr><td>RS-14</td><td>El sistema backend hospedado en Supabase debe garantizar una disponibilidad del 99.5% mensual limitando el tiempo de caída ininterrumpida a menos de 3.6 horas/mes.</td></tr>
+<tr><td>RS-15</td><td>El sistema móvil desarrollado en Flutter debe compilar código ejecutable e interoperable de manera idéntica en dispositivos Android versión 8.0 o superior e iOS versión 13.0 o superior.</td></tr>
 </tbody></table></div>
+
 <h3 id="funcionales-word">2.5 Requisitos funcionales</h3>
 <div class="table-scroll"><table class="tabla-word-7">
 <thead><tr><th scope="col">ID</th><th scope="col">Requisito funcional</th><th scope="col">Origen (interesado)</th><th scope="col">Prioridad</th></tr></thead>
 <tbody>
-<tr>
-<td>RF-01</td>
-<td>El sistema debe permitir al socio generar y compartir un código QR único para referir a nuevos clientes desde la aplicación móvil.</td>
-<td>Socio / Marketing</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-02</td>
-<td>El sistema debe capturar la intención de crédito del usuario durante el onboarding e identificarlo para aplicar la exención del depósito inicial de $30.</td>
-<td>Jefatura de Marketing</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-03</td>
-<td>El sistema debe desplegar un feed de comunidad encabezado por la mascota institucional que muestre noticias, capacitaciones, retos y entregas de premios por provincia.</td>
-<td>Gestor de Contenidos / Socio</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-04</td>
-<td>El sistema debe asignar puntos, insignias y niveles al usuario al completar capacitaciones de educación financiera, juegos o retos interactivos.</td>
-<td>Responsabilidad Social</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-05</td>
-<td>El sistema debe permitir al gestor de contenidos crear y publicar capacitaciones con videos, talleres, actividades de salud/bienestar y juegos educativos.</td>
-<td>Gestor de Contenidos</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-06</td>
-<td>El sistema debe permitir al socio consultar su saldo acumulado de puntos y solicitar el canje por souvenirs o acreditaciones monetarias a su cuenta.</td>
-<td>Socio</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-07</td>
-<td>El sistema debe generar reportes consolidados y estadísticos exportables en formatos PDF y Excel para el análisis gerencial de Marketing y Responsabilidad Social.</td>
-<td>Administrador / Gerencia</td>
-<td></td>
-</tr>
-<tr>
-<td>RF-08</td>
-<td>El sistema debe permitir la redirección directa a la app móvil mediante la clonación de la página web principal de la cooperativa con un solo clic.</td>
-<td>Equipo Técnico / Marketing</td>
-<td></td>
-</tr>
+<tr><td>RF-01</td><td>El sistema debe permitir al socio generar y compartir un código QR único para referir a nuevos clientes desde la aplicación móvil.</td><td>Socio / Marketing</td><td></td></tr>
+<tr><td>RF-02</td><td>El sistema debe capturar la intención de crédito del usuario durante el onboarding e identificarlo para aplicar la exención del depósito inicial de $30.</td><td>Jefatura de Marketing</td><td></td></tr>
+<tr><td>RF-03</td><td>El sistema debe desplegar un feed de comunidad encabezado por la mascota institucional que muestre noticias, capacitaciones, retos y entregas de premios por provincia.</td><td>Gestor de Contenidos / Socio</td><td></td></tr>
+<tr><td>RF-04</td><td>El sistema debe asignar puntos, insignias y niveles al usuario al completar capacitaciones de educación financiera, juegos o retos interactivos.</td><td>Responsabilidad Social</td><td></td></tr>
+<tr><td>RF-05</td><td>El sistema debe permitir al gestor de contenidos crear y publicar capacitaciones con videos, talleres, actividades de salud/bienestar y juegos educativos.</td><td>Gestor de Contenidos</td><td></td></tr>
+<tr><td>RF-06</td><td>El sistema debe permitir al socio consultar su saldo acumulado de puntos y solicitar el canje por souvenirs o acreditaciones monetarias a su cuenta.</td><td>Socio</td><td></td></tr>
+<tr><td>RF-07</td><td>El sistema debe generar reportes consolidados y estadísticos exportables en formatos PDF y Excel para el análisis gerencial de Marketing y Responsabilidad Social.</td><td>Administrador / Gerencia</td><td></td></tr>
+<tr><td>RF-08</td><td>El sistema debe permitir la redirección directa a la app móvil mediante la clonación de la página web principal de la cooperativa con un solo clic.</td><td>Equipo Técnico / Marketing</td><td></td></tr>
 </tbody></table></div>
 <p class="table-note">La columna «Prioridad» se mantiene vacía, tal como consta en la tabla del documento académico.</p>
+
 <h3 id="no-funcionales-word">2.6 Requisitos no funcionales</h3>
 <div class="table-scroll"><table class="tabla-word-8">
 <thead><tr><th scope="col">ID</th><th scope="col">Requisito no funcional</th><th scope="col">Categoría</th><th scope="col">Criterio medible</th></tr></thead>
 <tbody>
-<tr>
-<td>RNF-01</td>
-<td>La plataforma desarrollada en Flutter y Supabase debe mantener tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios registrados e interacciones simultáneas.</td>
-<td>Rendimiento y Escalabilidad</td>
-<td>Tiempo de respuesta &lt; 2 s con carga de 100k usuarios.</td>
-</tr>
-<tr>
-<td>RNF-02</td>
-<td>El sistema debe cifrar los datos de los usuarios e intenciones de crédito en tránsito (TLS 1.3) y en reposo (AES-256), aplicando control de acceso basado en roles (Socio, Gestor, Administrador).</td>
-<td>Seguridad y Privacidad</td>
-<td>Cero filtraciones de datos y paso del 100% de pruebas de penetración.</td>
-</tr>
-<tr>
-<td>RNF-03</td>
-<td>La interfaz móvil debe diseñarse para que un usuario mayor de 40 años pueda completar la consulta del feed o la visualización de su código QR en máximo 3 pasos y con texto no menor a 16pt.</td>
-<td>Usabilidad y Accesibilidad</td>
-<td>Prueba de usabilidad exitosa en ≥ 90% de adultos mayores evaluados sin capacitación.</td>
-</tr>
-<tr>
-<td>RNF-04</td>
-<td>El backend hospedado en Supabase debe garantizar una disponibilidad del servicio del 99.5% mensual (24/7) durante el lanzamiento de campañas masivas de referidos.</td>
-<td>Disponibilidad</td>
-<td>Tiempo de caída ininterrumpida menor a 3.6 horas/mes.</td>
-</tr>
-<tr>
-<td>RNF-05</td>
-<td>La aplicación desarrollada en Flutter debe ser ejecutable e interoperable de manera idéntica en dispositivos Android (versión 8.0+) e iOS (versión 13.0+).</td>
-<td>Compatibilidad</td>
-<td>Comprobación del 100% de funcionalidades en ambas tiendas oficiales (App Store y Play Store).</td>
-</tr>
+<tr><td>RNF-01</td><td>La plataforma desarrollada en Flutter y Supabase debe mantener tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios registrados e interacciones simultáneas.</td><td>Rendimiento y Escalabilidad</td><td>Tiempo de respuesta &lt; 2 s con carga de 100k usuarios.</td></tr>
+<tr><td>RNF-02</td><td>El sistema debe cifrar los datos de los usuarios e intenciones de crédito en tránsito (TLS 1.3) y en reposo (AES-256), aplicando control de acceso basado en roles (Socio, Gestor, Administrador).</td><td>Seguridad y Privacidad</td><td>Cero filtraciones de datos y paso del 100% de pruebas de penetración.</td></tr>
+<tr><td>RNF-03</td><td>La interfaz móvil debe diseñarse para que un usuario mayor de 40 años pueda completar la consulta del feed o la visualización de su código QR en máximo 3 pasos y con texto no menor a 16pt.</td><td>Usabilidad y Accesibilidad</td><td>Prueba de usabilidad exitosa en ≥ 90% de adultos mayores evaluados sin capacitación.</td></tr>
+<tr><td>RNF-04</td><td>El backend hospedado en Supabase debe garantizar una disponibilidad del servicio del 99.5% mensual (24/7) durante el lanzamiento de campañas masivas de referidos.</td><td>Disponibilidad</td><td>Tiempo de caída ininterrumpida menor a 3.6 horas/mes.</td></tr>
+<tr><td>RNF-05</td><td>La aplicación desarrollada en Flutter debe ser ejecutable e interoperable de manera idéntica en dispositivos Android (versión 8.0+) e iOS (versión 13.0+).</td><td>Compatibilidad</td><td>Comprobación del 100% de funcionalidades en ambas tiendas oficiales (App Store y Play Store).</td></tr>
 </tbody></table></div>
+
 <h3 id="ambiguedades">2.7 Cazador de ambigüedades</h3>
 <div class="table-scroll"><table class="tabla-word-9">
 <thead><tr><th scope="col">Requisito mal escrito</th><th scope="col">¿Qué problema tiene?</th><th scope="col">Versión mejorada</th></tr></thead>
@@ -530,6 +289,7 @@ td:first-child { font-weight: 600; }
 <td>&quot;El backend en Supabase debe soportar una concurrencia masiva de hasta 100.000 usuarios con una disponibilidad operativa del 99.5%.&quot;</td>
 </tr>
 </tbody></table></div>
+
 <h3 id="conflicto">2.8 Conflicto entre interesados</h3>
 <h4 id="conflicto-txt">Conflicto identificado:</h4>
 <p>La Jefatura de Marketing desea maximizar el volumen de captación eximiendo el depósito inicial de $30 y otorgando microcréditos (ej. $500) a personas con bajo buró de crédito o antecedentes para ganar clientes rechazados por la banca. Por otro lado, el Área de Riesgos / Contabilidad teme un aumento en la tasa de morosidad. Adicionalmente, existe una brecha generacional entre el 60% de socios mayores de 40 años (que prefieren atención presencial) y el 40% de jóvenes digitalizados.</p>
@@ -538,6 +298,7 @@ td:first-child { font-weight: 600; }
 <li>Estrategia Crediticia: Implementar en el onboarding inteligente un filtro de perfilamiento progresivo. Los solicitantes con bajo buró recibirán inicialmente un microcrédito condicionado a la aprobación previa de módulos de Educación Financiera y cumplimiento de retos dentro de la app antes del desembolso.</li>
 <li>Estrategia Demográfica: Habilitar asistencias presenciales con promotores en las agencias físicas para guiar a los jubilados en el escaneo de sus códigos QR y canje de souvenirs físicos, mientras que a los jóvenes se les incentiva con recompensas digitales y juegos interactivos.</li>
 </ul>
+
 <h3 id="priorizacion">Para pensar (Priorización MoSCoW para Lanzamiento)</h3>
 <p>Dado que se requiere lanzar una solución de alto impacto de forma ágil, el alcance se dividirá en dos fases:</p>
 <div class="table-scroll"><table class="tabla-word-10">
@@ -557,8 +318,73 @@ td:first-child { font-weight: 600; }
 <li>Release 1.0 (MVP Prioritario): Se enfocará en la gestión de usuarios, el sistema de referidos por código QR con onboarding inteligente, el feed principal con la mascota institucional, y los módulos de administración y reportes.</li>
 <li>Release 2.0 (Fase Evolutiva): Integrará los juegos interactivos avanzados de educación financiera y el componente integral de salud y bienestar.</li>
 </ul>
-<h2 id="web">4. Requisitos complementarios del panel web (Marketing y Administración)</h2>
+
+<h2 id="requisitos">4. Requerimientos funcionales y no funcionales</h2>
+<p>Esta página reúne en un solo lugar los requerimientos funcionales (RF) y no funcionales (RNF) de la plataforma, tanto de la aplicación móvil como del panel web. Los identificadores coinciden con los de las tablas de la Actividad 2 y del panel web.</p>
+<aside class="nota"><p>La columna «Prioridad» de los RF móviles es una <strong>propuesta</strong> basada en el plan de lanzamiento MoSCoW (Release 1.0 y 2.0). En el documento académico original esa columna estaba vacía, por lo que el equipo puede ajustarla.</p></aside>
+
+<h3 id="rf-movil">4.1 Requerimientos funcionales de la aplicación móvil</h3>
+<div class="table-scroll"><table class="tabla-requisitos">
+<thead><tr><th scope="col">ID</th><th scope="col">Requisito funcional</th><th scope="col">Origen (interesado)</th><th scope="col">Prioridad propuesta</th></tr></thead>
+<tbody>
+<tr><td>RF-01</td><td>El sistema debe permitir al socio generar y compartir un código QR único para referir a nuevos clientes desde la aplicación móvil.</td><td>Socio / Marketing</td><td>Must (M)</td></tr>
+<tr><td>RF-02</td><td>El sistema debe capturar la intención de crédito del usuario durante el onboarding e identificarlo para aplicar la exención del depósito inicial de $30.</td><td>Jefatura de Marketing</td><td>Must (M)</td></tr>
+<tr><td>RF-03</td><td>El sistema debe desplegar un feed de comunidad encabezado por la mascota institucional que muestre noticias, capacitaciones, retos y entregas de premios por provincia.</td><td>Gestor de Contenidos / Socio</td><td>Must (M)</td></tr>
+<tr><td>RF-04</td><td>El sistema debe asignar puntos, insignias y niveles al usuario al completar capacitaciones de educación financiera, juegos o retos interactivos.</td><td>Responsabilidad Social</td><td>Should (S)</td></tr>
+<tr><td>RF-05</td><td>El sistema debe permitir al gestor de contenidos crear y publicar capacitaciones con videos, talleres, actividades de salud/bienestar y juegos educativos.</td><td>Gestor de Contenidos</td><td>Could (C)</td></tr>
+<tr><td>RF-06</td><td>El sistema debe permitir al socio consultar su saldo acumulado de puntos y solicitar el canje por souvenirs o acreditaciones monetarias a su cuenta.</td><td>Socio</td><td>Should (S)</td></tr>
+<tr><td>RF-07</td><td>El sistema debe generar reportes consolidados y estadísticos exportables en formatos PDF y Excel para el análisis gerencial de Marketing y Responsabilidad Social.</td><td>Administrador / Gerencia</td><td>Must (M)</td></tr>
+<tr><td>RF-08</td><td>El sistema debe permitir la redirección directa a la app móvil mediante la clonación de la página web principal de la cooperativa con un solo clic.</td><td>Equipo Técnico / Marketing</td><td>Should (S)</td></tr>
+</tbody></table></div>
+
+<h3 id="rf-web-resumen">4.2 Requerimientos funcionales del panel web (resumen)</h3>
+<p>El texto completo de cada requisito está en la página <a href="#web">Panel web</a>.</p>
+<div class="table-scroll"><table class="tabla-requisitos">
+<thead><tr><th scope="col">ID</th><th scope="col">Resumen</th><th scope="col">Prioridad</th></tr></thead>
+<tbody>
+<tr><td>RF-WEB-01</td><td>Generar y compartir un código QR único de referido (móvil).</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-02</td><td>Capturar la intención de crédito en el onboarding y aplicar la exención de $30 (móvil).</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-03</td><td>Dashboard con métricas en tiempo real de referidos, conversiones y aperturas de cuentas.</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-04</td><td>Crear, configurar y dar de baja campañas de referidos con vigencias, reglas de puntos y premios.</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-05</td><td>Administrar el feed de la comunidad: noticias, capacitaciones y retos por provincia.</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-06</td><td>Gestionar, validar y aprobar solicitudes de canje de puntos.</td><td>Should (S)</td></tr>
+<tr><td>RF-WEB-07</td><td>Generar reportes consolidados exportables en PDF y Excel.</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-08</td><td>Moderar publicaciones y comentarios reportados en la red social interna.</td><td>Should (S)</td></tr>
+<tr><td>RF-WEB-09</td><td>Gestionar usuarios administrativos con control de acceso basado en roles (RBAC).</td><td>Must (M)</td></tr>
+<tr><td>RF-WEB-10</td><td>Configurar y programar notificaciones push segmentadas por comportamiento o provincia.</td><td>Should (S)</td></tr>
+</tbody></table></div>
+
+<h3 id="rnf-consolidado">4.3 Requerimientos no funcionales</h3>
+<div class="table-scroll"><table class="tabla-requisitos">
+<thead><tr><th scope="col">ID</th><th scope="col">Categoría</th><th scope="col">Requisito no funcional</th><th scope="col">Criterio medible</th></tr></thead>
+<tbody>
+<tr><td>RNF-01</td><td>Rendimiento y Escalabilidad</td><td>La plataforma desarrollada en Flutter y Supabase debe mantener tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios registrados e interacciones simultáneas.</td><td>Tiempo de respuesta &lt; 2 s con carga de 100k usuarios.</td></tr>
+<tr><td>RNF-02</td><td>Seguridad y Privacidad</td><td>El sistema debe cifrar los datos de los usuarios e intenciones de crédito en tránsito (TLS 1.3) y en reposo (AES-256), aplicando control de acceso basado en roles (Socio, Gestor, Administrador).</td><td>Cero filtraciones de datos y paso del 100% de pruebas de penetración.</td></tr>
+<tr><td>RNF-03</td><td>Usabilidad y Accesibilidad</td><td>La interfaz móvil debe diseñarse para que un usuario mayor de 40 años pueda completar la consulta del feed o la visualización de su código QR en máximo 3 pasos y con texto no menor a 16pt.</td><td>Prueba de usabilidad exitosa en ≥ 90% de adultos mayores evaluados sin capacitación.</td></tr>
+<tr><td>RNF-04</td><td>Disponibilidad</td><td>El backend hospedado en Supabase debe garantizar una disponibilidad del servicio del 99.5% mensual (24/7) durante el lanzamiento de campañas masivas de referidos.</td><td>Tiempo de caída ininterrumpida menor a 3.6 horas/mes.</td></tr>
+<tr><td>RNF-05</td><td>Compatibilidad móvil</td><td>La aplicación desarrollada en Flutter debe ser ejecutable e interoperable de manera idéntica en dispositivos Android (versión 8.0+) e iOS (versión 13.0+).</td><td>Comprobación del 100% de funcionalidades en ambas tiendas oficiales (App Store y Play Store).</td></tr>
+<tr><td>RNF-WEB-03</td><td>Compatibilidad web</td><td>El panel web de marketing debe ser compatible y responsivo en los principales navegadores de escritorio (Google Chrome, Mozilla Firefox, Microsoft Edge) con resoluciones HD y superiores.</td><td>Visualización y operatividad correcta al 100% en navegadores estándar.</td></tr>
+</tbody></table></div>
+<p class="table-note">RNF-WEB-01, RNF-WEB-02 y RNF-WEB-04 (página Panel web) replican RNF-01, RNF-02 y RNF-04 extendiéndolos al panel web, por eso no se repiten en esta tabla.</p>
+
+<h3 id="trazabilidad">4.4 Trazabilidad entre requisitos</h3>
+<p>Relación entre el requisito de usuario (RU), el requisito del sistema (RS) y el requisito funcional (RF) que los materializa.</p>
+<div class="table-scroll"><table class="tabla-requisitos">
+<thead><tr><th scope="col">Requisito de usuario</th><th scope="col">Requisito del sistema</th><th scope="col">Requisito funcional</th><th scope="col">Tema</th></tr></thead>
+<tbody>
+<tr><td>RU-01</td><td>RS-01</td><td>RF-01</td><td>Código QR de referidos</td></tr>
+<tr><td>RU-02</td><td>RS-02</td><td>RF-02</td><td>Intención de crédito y exención de $30</td></tr>
+<tr><td>RU-03</td><td>RS-03</td><td>RF-03</td><td>Feed de comunidad con la mascota</td></tr>
+<tr><td>RU-04</td><td>RS-04</td><td>RF-04</td><td>Puntos, insignias y niveles</td></tr>
+<tr><td>RU-05</td><td>RS-05</td><td>RF-05</td><td>Publicación de capacitaciones y juegos</td></tr>
+<tr><td>RU-06</td><td>RS-06</td><td>RF-06</td><td>Saldo de puntos y canje</td></tr>
+<tr><td>RU-07</td><td>RS-07</td><td>RF-07</td><td>Reportes PDF y Excel</td></tr>
+<tr><td>RU-08</td><td>RS-08</td><td>RF-08</td><td>Redirección a la app con un clic</td></tr>
+</tbody></table></div>
+
+<h2 id="web">5. Requisitos complementarios del panel web (Marketing y Administración)</h2>
 <aside class="nota"><p>Estos requisitos proceden del HTML original del equipo y se presentan separados de las tablas de Fundamentos de Ingeniería de Software. Se utiliza la nomenclatura RF-WEB y RNF-WEB únicamente para evitar duplicaciones de identificadores.</p></aside>
+
 <h3 id="rf-web">Requisitos funcionales del panel web</h3>
 <div class="table-scroll"><table><thead><tr><th>ID</th><th>Requisito funcional</th><th>Origen (interesado)</th><th>Prioridad</th></tr></thead><tbody>
 <tr><td>RF-WEB-01</td><td>El sistema móvil debe permitir al socio generar y compartir un código QR único para referir a nuevos clientes.</td><td>Socio / Marketing</td><td>Must (M)</td></tr>
@@ -572,6 +398,7 @@ td:first-child { font-weight: 600; }
 <tr><td>RF-WEB-09</td><td>El sistema web debe permitir la gestión de usuarios administrativos con control de acceso basado en roles (RBAC) para el personal de la cooperativa.</td><td>Seguridad / TI</td><td>Must (M)</td></tr>
 <tr><td>RF-WEB-10</td><td>El sistema web debe permitir configurar y programar el envío de notificaciones push y alertas orientadas a segmentos específicos de socios según su comportamiento o provincia.</td><td>Marketing</td><td>Should (S)</td></tr>
 </tbody></table></div>
+
 <h3 id="rnf-web">Requisitos no funcionales complementarios</h3>
 <div class="table-scroll"><table><thead><tr><th>ID</th><th>Requisito no funcional</th><th>Categoría</th><th>Criterio medible</th></tr></thead><tbody>
 <tr><td>RNF-WEB-01</td><td>La plataforma (móvil y panel web en Supabase) debe mantener tiempos de respuesta menores a 2 segundos con hasta 100.000 usuarios registrados e interacciones simultáneas.</td><td>Rendimiento y Escalabilidad</td><td>Tiempo de respuesta &lt; 2 s con carga masiva.</td></tr>
@@ -579,7 +406,9 @@ td:first-child { font-weight: 600; }
 <tr><td>RNF-WEB-03</td><td>El panel web de marketing debe ser compatible y responsivo en los principales navegadores de escritorio (Google Chrome, Mozilla Firefox, Microsoft Edge) con resoluciones HD y superiores.</td><td>Compatibilidad Web</td><td>Visualización y operatividad correcta al 100% en navegadores estándar.</td></tr>
 <tr><td>RNF-WEB-04</td><td>El backend hospedado en Supabase debe garantizar una disponibilidad del servicio del 99.5% mensual (24/7) durante campañas masivas de marketing.</td><td>Disponibilidad</td><td>Tiempo de caída ininterrumpida menor a 3.6 horas/mes.</td></tr>
 </tbody></table></div>
-<h2 id="casos">5. Casos de uso detallados - Panel Web (Marketing y Administración)</h2>
+
+<h2 id="casos">6. Casos de uso detallados - Panel Web (Marketing y Administración)</h2>
+
 <article class="use-case">
 <h3 id="caso-cu-01">CU-01: Gestión y Creación de Campañas de Referidos</h3>
 <p><strong>Actor Principal:</strong> Jefe de Marketing / Administrador.</p>
@@ -592,6 +421,7 @@ td:first-child { font-weight: 600; }
 <li>Se confirma la creación y Supabase almacena la campaña para activarse automáticamente en la app móvil.</li>
 </ol>
 </article>
+
 <article class="use-case">
 <h3 id="caso-cu-02">CU-02: Monitoreo de Conversiones y Rendimiento (Dashboard)</h3>
 <p><strong>Actor Principal:</strong> Jefatura de Marketing.</p>
@@ -604,6 +434,7 @@ td:first-child { font-weight: 600; }
 <li>El sistema actualiza dinámicamente los gráficos y métricas en pantalla.</li>
 </ol>
 </article>
+
 <article class="use-case">
 <h3 id="caso-cu-03">CU-03: Administración y Moderación del Feed de la Comunidad</h3>
 <p><strong>Actor Principal:</strong> Gestor de Contenidos / Marketing.</p>
@@ -616,6 +447,7 @@ td:first-child { font-weight: 600; }
 <li>El sistema actualiza el estado en la base de datos reflejándose en la app móvil.</li>
 </ol>
 </article>
+
 <article class="use-case">
 <h3 id="caso-cu-04">CU-04: Gestión y Aprobación de Canje de Recompensas</h3>
 <p><strong>Actor Principal:</strong> Administrador / Personal de Finanzas.</p>
@@ -628,6 +460,7 @@ td:first-child { font-weight: 600; }
 <li>El sistema descuenta los puntos en Supabase y actualiza el estado a &quot;Completada&quot;.</li>
 </ol>
 </article>
+
 <article class="use-case">
 <h3 id="caso-cu-05">CU-05: Generación y Exportación de Reportes Gerenciales</h3>
 <p><strong>Actor Principal:</strong> Administrador / Jefatura de Marketing.</p>
@@ -640,8 +473,359 @@ td:first-child { font-weight: 600; }
 <li>El backend procesa la consulta masiva y descarga directamente el archivo formateado.</li>
 </ol>
 </article>
-<h2 id="ideas">6. Propuestas de ideas para mejorar la plataforma</h2>
+
+<h2 id="tecnologias">7. Tecnologías a utilizar (Flutter y Supabase)</h2>
+<p>El stack definido para el proyecto es <strong>Flutter</strong> en el frontend y <strong>Supabase</strong> en el backend. Esta página detalla qué parte de cada requisito cubre cada tecnología, la arquitectura propuesta y los puntos que conviene validar antes de construir.</p>
+
+<h3 id="stack">7.1 Resumen del stack</h3>
+<div class="table-scroll"><table class="tabla-tecnologias">
+<thead><tr><th scope="col">Capa</th><th scope="col">Tecnología</th><th scope="col">Uso en el proyecto</th></tr></thead>
+<tbody>
+<tr><td>App móvil de socios</td><td>Flutter (Dart)</td><td>Una sola base de código para Android 8.0+ e iOS 13.0+ (RNF-05).</td></tr>
+<tr><td>Panel web de administración</td><td>Flutter Web</td><td>Reutiliza modelos y lógica del cliente de Supabase; debe funcionar en Chrome, Firefox y Edge (RNF-WEB-03).</td></tr>
+<tr><td>Base de datos</td><td>Supabase PostgreSQL</td><td>Almacena usuarios, referidos, intenciones de crédito, campañas, puntos y canjes.</td></tr>
+<tr><td>Autenticación</td><td>Supabase Auth</td><td>Registro e inicio de sesión de socios, gestores y administradores.</td></tr>
+<tr><td>Autorización por roles</td><td>Row Level Security (RLS) + tabla de roles</td><td>Control de acceso Socio / Gestor / Administrador (RNF-02, RF-WEB-09).</td></tr>
+<tr><td>Archivos multimedia</td><td>Supabase Storage</td><td>Videos de capacitaciones, imágenes del feed y recursos de la mascota.</td></tr>
+<tr><td>Actualizaciones en vivo</td><td>Supabase Realtime</td><td>Métricas del dashboard y feed de comunidad (RF-WEB-03, RF-03).</td></tr>
+<tr><td>Lógica de servidor</td><td>Edge Functions y funciones SQL</td><td>Asignar puntos, validar canjes, generar reportes y enviar notificaciones.</td></tr>
+<tr><td>Tareas programadas</td><td>pg_cron</td><td>Activar y cerrar campañas por vigencia, y recalcular tablas agregadas del dashboard.</td></tr>
+<tr><td>Notificaciones push</td><td>Firebase Cloud Messaging (FCM), llamado desde Edge Functions</td><td>Supabase no envía push por sí mismo; FCM cubre Android e iOS (RF-WEB-10).</td></tr>
+</tbody></table></div>
+
+<h3 id="paquetes">7.2 Paquetes de Flutter sugeridos</h3>
+<p>Son propuestas de partida; antes de fijarlos hay que revisar su versión, mantenimiento y compatibilidad con la versión de Flutter elegida.</p>
+<div class="table-scroll"><table class="tabla-tecnologias">
+<thead><tr><th scope="col">Necesidad</th><th scope="col">Paquete sugerido</th><th scope="col">Requisito relacionado</th></tr></thead>
+<tbody>
+<tr><td>Conexión con Supabase</td><td>supabase_flutter</td><td>Todos</td></tr>
+<tr><td>Generar el código QR</td><td>qr_flutter</td><td>RF-01</td></tr>
+<tr><td>Escanear códigos QR</td><td>mobile_scanner</td><td>RF-01, idea 15</td></tr>
+<tr><td>Estado de la aplicación</td><td>flutter_riverpod (o flutter_bloc)</td><td>Arquitectura modular</td></tr>
+<tr><td>Navegación y enlaces profundos</td><td>go_router</td><td>RF-08</td></tr>
+<tr><td>Gráficos del dashboard</td><td>fl_chart</td><td>RF-WEB-03</td></tr>
+<tr><td>Reportes en PDF</td><td>pdf</td><td>RF-07</td></tr>
+<tr><td>Reportes en Excel</td><td>excel</td><td>RF-07</td></tr>
+<tr><td>Notificaciones push</td><td>firebase_messaging</td><td>RF-WEB-10</td></tr>
+</tbody></table></div>
+
+<h3 id="justificacion">7.3 Por qué Flutter y Supabase</h3>
+<h4>Flutter</h4>
+<ul>
+<li>Un solo código genera la app para Android e iOS y también el panel web, lo que reduce tiempo y costo de desarrollo.</li>
+<li>Permite controlar el tamaño del texto y el diseño de los botones, algo clave para el 60% de socios mayores de 40 años (RNF-03).</li>
+<li>Su sistema de widgets facilita crear la mascota, el feed y las mecánicas de gamificación con animaciones fluidas.</li>
+</ul>
+<h4>Supabase</h4>
+<ul>
+<li>Entrega base de datos relacional, autenticación, archivos y tiempo real en un solo servicio, sin construir un backend desde cero.</li>
+<li>PostgreSQL es adecuado para datos con relaciones claras (referidos, puntos, canjes) y para consultas agregadas de reportes.</li>
+<li>Las políticas RLS aplican los permisos por rol directamente en la base de datos.</li>
+<li>Al estar basado en PostgreSQL de código abierto, reduce el riesgo de quedar atado a un proveedor.</li>
+</ul>
+
+<h3 id="arquitectura">7.4 Arquitectura propuesta</h3>
+<p>La arquitectura tiene tres capas: los clientes (app móvil y panel web en Flutter), Supabase como backend y los servicios externos (notificaciones push).</p>
+<ol>
+<li>El socio inicia sesión en la app Flutter, que se conecta a Supabase Auth mediante <code>supabase_flutter</code>.</li>
+<li>La app genera el código QR del socio a partir de su código de referido único y lo comparte.</li>
+<li>El nuevo cliente llega desde el QR o desde la página web de la cooperativa, que lo redirige a la app con un clic (RF-08).</li>
+<li>En el onboarding, el referido registra su intención de crédito; el sistema la guarda y marca la exención del depósito de $30 (RF-02).</li>
+<li>Una función de servidor asigna los puntos al socio que refirió y registra el movimiento en el libro de puntos.</li>
+<li>El panel web consulta vistas y tablas agregadas en Supabase y muestra las métricas casi en tiempo real (RF-WEB-03).</li>
+<li>Una Edge Function envía las notificaciones push por FCM cuando cambia el estado de un referido o hay una nueva actividad.</li>
+</ol>
+
+<h3 id="modelo-datos">7.5 Modelo de datos inicial</h3>
+<p>Propuesta de tablas principales. Los nombres y campos son un punto de partida y deben refinarse durante el diseño de base de datos.</p>
+<div class="table-scroll"><table class="tabla-tecnologias">
+<thead><tr><th scope="col">Tabla</th><th scope="col">Propósito</th><th scope="col">Campos clave</th></tr></thead>
+<tbody>
+<tr><td>profiles</td><td>Datos del usuario y su rol</td><td>id (vinculado a Auth), nombres, provincia, rol, rango de edad</td></tr>
+<tr><td>referrals</td><td>Referidos generados por cada socio</td><td>id, referrer_id, referred_id, código, estado, fecha</td></tr>
+<tr><td>credit_intents</td><td>Intención de crédito del onboarding</td><td>id, user_id, monto estimado, depósito exento, estado</td></tr>
+<tr><td>campaigns</td><td>Campañas de referidos</td><td>id, título, descripción, inicio, fin, reglas de puntos, activa</td></tr>
+<tr><td>posts</td><td>Publicaciones del feed</td><td>id, autor_id, tipo, provincia, contenido, estado de moderación</td></tr>
+<tr><td>trainings</td><td>Capacitaciones, talleres y juegos</td><td>id, título, tipo, url del contenido, publicado</td></tr>
+<tr><td>points_ledger</td><td>Movimientos de puntos (el saldo es la suma)</td><td>id, user_id, puntos, motivo, referencia, fecha</td></tr>
+<tr><td>rewards</td><td>Catálogo de recompensas</td><td>id, nombre, tipo (souvenir o abono), costo en puntos, stock</td></tr>
+<tr><td>redemptions</td><td>Solicitudes de canje</td><td>id, user_id, reward_id, estado, aprobado por</td></tr>
+<tr><td>notifications</td><td>Notificaciones enviadas</td><td>id, destinatario o segmento, título, cuerpo, leída</td></tr>
+</tbody></table></div>
+
+<h3 id="cumplimiento-rnf">7.6 Cómo el stack cubre los requisitos no funcionales</h3>
+<div class="table-scroll"><table class="tabla-tecnologias">
+<thead><tr><th scope="col">Requisito</th><th scope="col">Decisión técnica</th><th scope="col">Cómo se verifica</th></tr></thead>
+<tbody>
+<tr><td>RNF-01 Rendimiento (&lt; 2 s, 100.000 usuarios)</td><td>Índices en las tablas más consultadas, paginación del feed, tablas o vistas agregadas para el dashboard, pooling de conexiones y un plan de Supabase con recursos suficientes.</td><td>Pruebas de carga con una herramienta como k6 antes de cada campaña masiva.</td></tr>
+<tr><td>RNF-02 Seguridad (TLS 1.3, AES-256, roles)</td><td>Cifrado en tránsito y en reposo provisto por Supabase, RLS en todas las tablas con datos de socios y claves de servicio solo dentro de Edge Functions.</td><td>Revisión de la documentación del plan contratado y pruebas de penetración.</td></tr>
+<tr><td>RNF-03 Usabilidad (3 pasos, texto ≥ 16 pt)</td><td>Tema de Flutter con tamaños de texto mínimos, botones grandes, alto contraste y navegación inferior con pocas pestañas.</td><td>Pruebas de usabilidad con socios mayores de 40 años.</td></tr>
+<tr><td>RNF-04 Disponibilidad (99.5%)</td><td>Monitoreo y alertas, y mantenimiento fuera de las ventanas de campaña.</td><td>Confirmar el SLA del plan de Supabase y medir la disponibilidad mensual.</td></tr>
+<tr><td>RNF-05 Compatibilidad (Android 8.0+, iOS 13.0+)</td><td>Una sola base de código Flutter compilada para ambas plataformas.</td><td>Pruebas en dispositivos reales y publicación en Play Store y App Store.</td></tr>
+<tr><td>RNF-WEB-03 Navegadores</td><td>Flutter Web con diseño responsivo.</td><td>Pruebas en Chrome, Firefox y Edge con resoluciones HD o superiores.</td></tr>
+</tbody></table></div>
+
+<h3 id="riesgos">7.7 Riesgos y puntos a validar</h3>
+<ul>
+<li><strong>Definición de la carga:</strong> RN-01 habla de 100.000 usuarios <em>concurrentes</em> y RNF-01 de 100.000 usuarios <em>registrados</em> con interacciones simultáneas. Son escenarios muy distintos; conviene aclararlo con las jefaturas antes de dimensionar el backend.</li>
+<li><strong>Versiones mínimas:</strong> verificar que la versión de Flutter elegida soporte como mínimo Android 8.0 e iOS 13.0.</li>
+<li><strong>Notificaciones push:</strong> requieren una cuenta de Firebase y la configuración de APNs para iOS, que no vienen incluidas en Supabase.</li>
+<li><strong>Reportes pesados:</strong> los reportes masivos en PDF y Excel deben generarse en el servidor (Edge Function) para no bloquear el panel.</li>
+<li><strong>Costos:</strong> el plan de Supabase y el consumo de Storage (videos) influyen en el presupuesto; hay que estimarlos con el volumen esperado.</li>
+<li><strong>Datos personales:</strong> la plataforma maneja intenciones de crédito, por lo que conviene revisar el cumplimiento de la normativa ecuatoriana de protección de datos personales.</li>
+</ul>
+
+<h2 id="prototipo">8. Prototipo de diseño</h2>
+<p>Prototipo de baja fidelidad (wireframes) de la aplicación móvil y del panel web. Está construido con HTML sin estilos para que el equipo lo pueda diseñar desde <code>estilos/estilos.css</code>. Cada pantalla indica los requisitos que cubre.</p>
+
+<h3 id="principios">8.1 Principios de diseño</h3>
+<ul>
+<li><strong>Accesible para adultos mayores:</strong> texto de al menos 16 pt, botones grandes y alto contraste (RNF-03).</li>
+<li><strong>Pocos pasos:</strong> consultar el feed o ver el código QR en máximo 3 pasos (RNF-03), y compartir el QR en máximo 2 clics desde el inicio.</li>
+<li><strong>Mascota institucional como guía:</strong> acompaña el feed y el onboarding para conectar con socios jóvenes y mayores (RF-03).</li>
+<li><strong>Iconos con etiqueta:</strong> ningún icono aparece solo, siempre lleva texto.</li>
+<li><strong>Ayuda presencial:</strong> el onboarding ofrece pedir asistencia en agencia para quienes prefieren atención presencial.</li>
+</ul>
+
+<h3 id="navegacion-movil">8.2 Navegación de la aplicación móvil</h3>
+<p>Barra inferior fija con cinco pestañas:</p>
+<ol>
+<li>Inicio (feed de la comunidad)</li>
+<li>Referidos (mi código QR)</li>
+<li>Aprender (capacitaciones y retos)</li>
+<li>Premios (puntos y canje)</li>
+<li>Perfil</li>
+</ol>
+
+<h3 id="pantallas-moviles">8.3 Pantallas de la aplicación móvil</h3>
+
+<article class="pantalla" id="pantalla-onboarding">
+<h4>Pantalla 1. Bienvenida y onboarding inteligente</h4>
+<p><strong>Requisitos:</strong> RF-02, RU-02.</p>
+<div class="wireframe-movil">
+<header><div role="img" aria-label="Mascota institucional">[Mascota]</div><h5>¡Bienvenido a la Cooperativa Padre Julián Lorente!</h5></header>
+<form>
+<p>¿Te interesa solicitar un crédito?</p>
+<p><button type="button">Sí, me interesa</button> <button type="button">Por ahora no</button></p>
+<p><label for="monto">Monto aproximado</label> <input type="text" id="monto" placeholder="Ej. $500"></p>
+<p><button type="submit">Continuar</button></p>
+</form>
+<footer><a href="#pantalla-onboarding">Necesito ayuda en una agencia</a></footer>
+</div>
+</article>
+
+<article class="pantalla" id="pantalla-feed">
+<h4>Pantalla 2. Inicio (feed de la comunidad)</h4>
+<p><strong>Requisitos:</strong> RF-03, RU-03, RNF-03.</p>
+<div class="wireframe-movil">
+<header><div role="img" aria-label="Mascota institucional">[Mascota]</div><h5>Hola, [Nombre]</h5></header>
+<p><button type="button">Mi código QR</button></p>
+<p><label for="filtro-provincia">Provincia</label> <select id="filtro-provincia"><option>Todas</option><option>Loja</option></select></p>
+<section>
+<article><h5>Noticia</h5><p>Título y resumen de la novedad institucional.</p></article>
+<article><h5>Capacitación</h5><p>Taller de educación financiera disponible.</p></article>
+<article><h5>Reto</h5><p>Reto activo con puntos de recompensa.</p></article>
+<article><h5>Entrega de premios</h5><p>Ganadores de la provincia.</p></article>
+</section>
+<nav aria-label="Barra inferior"><a href="#pantalla-feed">Inicio</a> <a href="#pantalla-qr">Referidos</a> <a href="#pantalla-aprender">Aprender</a> <a href="#pantalla-premios">Premios</a> <a href="#pantalla-perfil">Perfil</a></nav>
+</div>
+</article>
+
+<article class="pantalla" id="pantalla-qr">
+<h4>Pantalla 3. Mi código QR</h4>
+<p><strong>Requisitos:</strong> RF-01, RU-01.</p>
+<div class="wireframe-movil">
+<header><h5>Mi código QR</h5></header>
+<div role="img" aria-label="Código QR del socio">[QR grande]</div>
+<p>Código: <strong>PJL-XXXXXX</strong></p>
+<p><button type="button">Compartir</button> <button type="button">Guardar imagen</button></p>
+<section>
+<h5>Mis referidos</h5>
+<ul>
+<li>[Nombre] · Registrado</li>
+<li>[Nombre] · Abrió su cuenta</li>
+<li>[Nombre] · Recompensa obtenida</li>
+</ul>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="pantalla-aprender">
+<h4>Pantalla 4. Aprender y retos</h4>
+<p><strong>Requisitos:</strong> RF-04, RF-05, RU-04, RU-14.</p>
+<div class="wireframe-movil">
+<header><h5>Aprender</h5></header>
+<section>
+<h5>Mi nivel</h5>
+<p>Nivel [N] · <progress value="40" max="100">40%</progress></p>
+<p>Insignias: [Insignia 1] [Insignia 2] [Insignia 3]</p>
+</section>
+<section>
+<h5>Capacitaciones</h5>
+<ul>
+<li>[Video] Ahorro para tu familia · <button type="button">Ver</button></li>
+<li>[Juego] Decisiones financieras · <button type="button">Jugar</button></li>
+</ul>
+</section>
+<section>
+<h5>Retos activos</h5>
+<ul><li>[Reto] Completa 3 capacitaciones · +50 puntos</li></ul>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="pantalla-premios">
+<h4>Pantalla 5. Premios y canje</h4>
+<p><strong>Requisitos:</strong> RF-06, RU-06.</p>
+<div class="wireframe-movil">
+<header><h5>Mis puntos</h5><p><strong>[0000] puntos</strong></p></header>
+<section>
+<h5>Catálogo</h5>
+<ul>
+<li>[Souvenir] · [costo] puntos · <button type="button">Canjear</button></li>
+<li>[Abono a cuenta] · [costo] puntos · <button type="button">Canjear</button></li>
+</ul>
+</section>
+<section>
+<h5>Mis canjes</h5>
+<ul><li>[Premio] · Pendiente</li><li>[Premio] · Completada</li></ul>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="pantalla-perfil">
+<h4>Pantalla 6. Perfil</h4>
+<p><strong>Requisitos:</strong> RF-06, RU-09, RU-10, RU-12.</p>
+<div class="wireframe-movil">
+<header><h5>Mi perfil</h5></header>
+<form>
+<p><label for="perfil-nombre">Nombres</label> <input type="text" id="perfil-nombre"></p>
+<p><label for="perfil-provincia">Provincia</label> <input type="text" id="perfil-provincia"></p>
+<p><label><input type="checkbox"> Recibir notificaciones</label></p>
+<p><label><input type="checkbox"> Mostrar mis logros a otros socios</label></p>
+<p><button type="submit">Guardar cambios</button></p>
+</form>
+</div>
+</article>
+
+<h3 id="pantallas-web">8.4 Pantallas del panel web</h3>
+<p>Estructura común: menú lateral con las secciones, barra superior con el usuario y su rol, y un área de contenido.</p>
+
+<article class="pantalla" id="web-dashboard">
+<h4>Pantalla web 1. Dashboard</h4>
+<p><strong>Requisitos:</strong> RF-WEB-03, CU-02.</p>
+<div class="wireframe-web">
+<aside><nav aria-label="Menú del panel"><ul><li>Dashboard</li><li>Campañas</li><li>Comunidad</li><li>Canjes</li><li>Reportes</li><li>Usuarios</li></ul></nav></aside>
+<section>
+<header><h5>Dashboard</h5>
+<p><label for="web-desde">Desde</label> <input type="date" id="web-desde"> <label for="web-hasta">Hasta</label> <input type="date" id="web-hasta"> <label for="web-prov">Provincia</label> <select id="web-prov"><option>Todas</option></select></p></header>
+<ul class="indicadores"><li>Referidos: [0000]</li><li>QR escaneados: [0000]</li><li>Conversiones: [0000]</li><li>Cuentas abiertas: [0000]</li></ul>
+<div role="img" aria-label="Gráfico de referidos por fecha">[Gráfico de líneas: referidos por día]</div>
+<div role="img" aria-label="Gráfico de conversiones por provincia">[Gráfico de barras: conversiones por provincia]</div>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="web-campanas">
+<h4>Pantalla web 2. Campañas</h4>
+<p><strong>Requisitos:</strong> RF-WEB-04, CU-01.</p>
+<div class="wireframe-web">
+<section>
+<header><h5>Campañas</h5><button type="button">Nueva campaña</button></header>
+<table>
+<thead><tr><th>Título</th><th>Vigencia</th><th>Estado</th><th>Acciones</th></tr></thead>
+<tbody>
+<tr><td>[Campaña 1]</td><td>[inicio] a [fin]</td><td>Activa</td><td>Editar · Dar de baja</td></tr>
+<tr><td>[Campaña 2]</td><td>[inicio] a [fin]</td><td>Programada</td><td>Editar · Dar de baja</td></tr>
+</tbody></table>
+<form>
+<h5>Nueva campaña</h5>
+<p><label for="camp-titulo">Título</label> <input type="text" id="camp-titulo"></p>
+<p><label for="camp-desc">Descripción</label> <textarea id="camp-desc"></textarea></p>
+<p><label for="camp-inicio">Inicio</label> <input type="date" id="camp-inicio"> <label for="camp-fin">Fin</label> <input type="date" id="camp-fin"></p>
+<p><label for="camp-premio">Recompensas y beneficios</label> <input type="text" id="camp-premio"></p>
+<p><button type="submit">Guardar campaña</button></p>
+</form>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="web-comunidad">
+<h4>Pantalla web 3. Comunidad y moderación</h4>
+<p><strong>Requisitos:</strong> RF-WEB-05, RF-WEB-08, CU-03.</p>
+<div class="wireframe-web">
+<section>
+<header><h5>Comunidad / Moderación</h5><button type="button">Nueva publicación</button></header>
+<table>
+<thead><tr><th>Publicación</th><th>Autor</th><th>Estado</th><th>Acciones</th></tr></thead>
+<tbody>
+<tr><td>[Contenido reportado]</td><td>[Socio]</td><td>Reportada</td><td>Aprobar · Ocultar · Eliminar</td></tr>
+<tr><td>[Noticia institucional]</td><td>[Gestor]</td><td>Publicada</td><td>Editar · Ocultar</td></tr>
+</tbody></table>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="web-canjes">
+<h4>Pantalla web 4. Canjes y recompensas</h4>
+<p><strong>Requisitos:</strong> RF-WEB-06, CU-04.</p>
+<div class="wireframe-web">
+<section>
+<header><h5>Canjes y recompensas</h5></header>
+<table>
+<thead><tr><th>Socio</th><th>Premio</th><th>Puntos</th><th>Estado</th><th>Acciones</th></tr></thead>
+<tbody>
+<tr><td>[Socio]</td><td>[Souvenir]</td><td>[000]</td><td>Pendiente</td><td><button type="button">Aprobar</button> <button type="button">Rechazar</button></td></tr>
+<tr><td>[Socio]</td><td>[Abono a cuenta]</td><td>[000]</td><td>Completada</td><td>Ver detalle</td></tr>
+</tbody></table>
+</section>
+</div>
+</article>
+
+<article class="pantalla" id="web-reportes">
+<h4>Pantalla web 5. Reportes y estadísticas</h4>
+<p><strong>Requisitos:</strong> RF-07, RF-WEB-07, CU-05.</p>
+<div class="wireframe-web">
+<section>
+<header><h5>Reportes y estadísticas</h5></header>
+<form>
+<p><label for="rep-tipo">Tipo de reporte</label> <select id="rep-tipo"><option>Referidos por campaña</option><option>Conversiones por provincia</option><option>Canjes realizados</option></select></p>
+<p><label for="rep-formato">Formato</label> <select id="rep-formato"><option>PDF</option><option>Excel</option></select></p>
+<p><label for="rep-desde">Desde</label> <input type="date" id="rep-desde"> <label for="rep-hasta">Hasta</label> <input type="date" id="rep-hasta"></p>
+<p><button type="submit">Generar y descargar</button></p>
+</form>
+</section>
+</div>
+</article>
+
+<h3 id="flujo">8.5 Flujo principal del usuario</h3>
+<ol>
+<li>El socio abre la aplicación y llega al Inicio.</li>
+<li>Toca «Mi código QR» (1 paso) y elige «Compartir».</li>
+<li>El referido escanea el QR o entra a la página web de la cooperativa y es redirigido a la app con un clic.</li>
+<li>El referido completa el onboarding y registra su intención de crédito; el sistema aplica la exención del depósito de $30.</li>
+<li>El socio recibe una notificación con el estado de su referido y suma puntos.</li>
+<li>El socio canjea sus puntos en «Premios».</li>
+<li>Marketing revisa la conversión en el dashboard y aprueba el canje desde el panel web.</li>
+</ol>
+
+<h3 id="siguientes-pasos">8.6 Siguientes pasos</h3>
+<ul>
+<li>Validar los wireframes con las jefaturas de Marketing y Responsabilidad Social.</li>
+<li>Probar la pantalla de Inicio y la del código QR con socios mayores de 40 años.</li>
+<li>Definir la identidad visual: colores de la cooperativa, tipografía y diseño de la mascota.</li>
+<li>Pasar a un prototipo de alta fidelidad para la presentación final.</li>
+</ul>
+<h3 id="prototipo-en-linea">8.7 Prototipo interactivo en línea</h3>
+<p>Además de los wireframes, el proyecto cuenta con una versión interactiva publicada en Google AI Studio: «Cooperativa Padre Julián Lorente | Plataforma de Fidelización &amp; Red Social». Presenta la plataforma construida en Flutter y Supabase, pensada para hasta 100.000 usuarios concurrentes, con 13 módulos y 3 roles de usuario.</p>
+<p><a class="boton-enlace" href="https://cooperativa-padre-juli-n-lorente-plataforma-digit.ai.studio/" target="_blank" rel="noopener">Abrir el prototipo en una pestaña nueva</a></p>
+<div class="prototipo-en-linea">
+<iframe src="https://cooperativa-padre-juli-n-lorente-plataforma-digit.ai.studio/" title="Prototipo interactivo de la plataforma de la Cooperativa Padre Julián Lorente" loading="lazy"></iframe>
+</div>
+<p class="table-note">Si el cuadro aparece en blanco, el sitio no permite mostrarse dentro de otra página. En ese caso usa el botón de arriba.</p>
+<h2 id="ideas">9. Propuestas de ideas para mejorar la plataforma</h2>
 <p>Las siguientes propuestas se presentan como ideas de mejora para evaluación y priorización por parte de la cooperativa. No se consideran requisitos aprobados automáticamente.</p>
+
 <article class="idea"><h3>1. Sistema de rachas diarias (Duolingo)</h3><p>Implementar un sistema de rachas que motive a los usuarios a ingresar diariamente a la aplicación y completar pequeñas actividades, como responder preguntas financieras o participar en retos. Se incluirán comodines para conservar el progreso cuando no puedan participar algún día.</p></article>
 <article class="idea"><h3>2. Muro de logros personales (BeReal)</h3><p>Crear un espacio donde los socios puedan compartir voluntariamente sus logros, como completar capacitaciones, cumplir metas de ahorro o superar desafíos. Esto permitirá fomentar la interacción social y motivar a otros usuarios.</p></article>
 <article class="idea"><h3>3. Educación financiera mediante videos cortos (TikTok)</h3><p>Incorporar una sección de videos educativos de corta duración, acompañados de preguntas y actividades interactivas que permitan aprender conceptos financieros de manera rápida, entretenida y sencilla.</p></article>
@@ -660,11 +844,15 @@ td:first-child { font-weight: 600; }
 <article class="idea"><h3>16. Misión diaria personalizada</h3><p>Crear una sección denominada «Tu misión de hoy», donde cada socio encuentre una actividad breve adaptada a sus intereses. Estas misiones podrán combinar educación financiera, retos, puntos, recompensas y participación comunitaria.</p></article>
 <article class="idea"><h3>17. Panel administrativo de indicadores y estadísticas</h3><p>Desarrollar un panel que permita a los administradores visualizar información sobre usuarios activos, participación en actividades, referidos registrados, recompensas utilizadas y efectividad de las campañas.</p></article>
 <article class="idea"><h3>18. Sistema de medición de participación y fidelización</h3><p>Implementar indicadores que permitan analizar la frecuencia de uso, la finalización de actividades y la permanencia de los socios en la aplicación, con el propósito de mejorar continuamente la experiencia.</p></article>
+
 <h3 id="conclusion">Conclusión de las propuestas</h3>
 <div class="cierre">
 <p>Las ideas propuestas buscan transformar la Plataforma de Referidos de la Cooperativa Padre Julián Lorente en un ecosistema digital que vaya más allá de la promoción de productos financieros.</p>
 <p>La combinación de referidos, gamificación, educación financiera, interacción social y recompensas permitirá ofrecer una experiencia más atractiva para los socios, incentivando su participación constante y fortaleciendo su relación con la cooperativa.</p>
 <p>Finalmente, se considera que las funcionalidades con mayor potencial diferenciador son las misiones diarias personalizadas, los retos colectivos, el seguimiento de referidos y el sistema de recompensas, debido a que combinan facilidad de uso, motivación y beneficios tanto para los usuarios como para la institución.</p>
 </div>
+
 <footer class="pie"><p>Documento integrado para presentación académica · Fundamentos de Ingeniería de Software · CAC-PJL · 28/10/2026</p></footer>
-</main></body></html>
+</main>
+</body>
+</html>
